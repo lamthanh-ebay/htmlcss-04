@@ -44,7 +44,9 @@ button {
 .btn {
     --height: 56px;
 
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     min-width: 117px;
     height: var(--height);
     line-height: var(--height);
@@ -57,7 +59,7 @@ button {
     border-radius: 99px;
     border: 1px solid rgba(255, 91, 46, 0.6);
 
-    cursor: pointer;
+    user-select: none;
     -webkit-tap-highlight-color: none;
     transition: background-color, color;
     transition-duration: 0.15s;
@@ -65,6 +67,25 @@ button {
 }
 
 .btn:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.btn__primary {
+    color: #fff;
+    background: var(--second-color);
+    border-color: var(--second-color);
+}
+
+.btn__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
 }
 
 .container {
@@ -142,6 +163,9 @@ button {
 
 .hero-wrap {
     margin-top: 74px;
+    display: flex;
+    align-items: center;
+    column-gap: 121px;
 }
 
 /* Hero Media */
@@ -262,4 +286,43 @@ button {
     height: 2px;
     border-radius: 99px;
     background-color: #f2f2f2;
+}
+
+/* Hero Content */
+.hero-content {
+}
+
+.hero__heading {
+    color: var(--primary-color);
+    font-size: 6.6rem;
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+.hero__desc {
+    margin-top: 24px;
+    width: 390px;
+    color: #656689;
+    line-height: 1.87;
+}
+
+.hero-row {
+    margin-top: 38px;
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+}
+
+.hero__cta-btn {
+    --height: 60px;
+    min-width: 189px;
+    font-weight: 600;
+    box-shadow: 0px 13px 26px -8px rgba(255, 91, 46, 0.42);
+}
+
+.hero__cta-link {
+    color: var(--primary-color);
+    font-weight: 500;
+    line-height: 1;
+    text-decoration: underline;
 }
