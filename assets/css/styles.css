@@ -466,7 +466,7 @@ button {
 .about__media-image-img {
     width: 450px;
     display: block;
-    margin: 0 auto;
+    margin: 8px auto 0;
 }
 
 .about__media-image::after {
