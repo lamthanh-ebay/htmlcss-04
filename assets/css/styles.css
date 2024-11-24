@@ -74,9 +74,9 @@ button {
 }
 
 .btn__primary {
-    color: #fff;
-    background: var(--second-color);
-    border-color: var(--second-color);
+    color: #fff !important;
+    background: var(--second-color) !important;
+    border-color: var(--second-color) !important;
 }
 
 .btn__icon {
@@ -951,4 +951,169 @@ button {
 .staff__cta-btn:hover {
     color: #fff;
     background-color: var(--second-color);
+}
+
+/* Plan */
+.plan {
+    padding: 86px 0;
+    background-color: #fff6ed;
+}
+
+.plan-wrap {
+}
+
+.plan-top {
+    text-align: center;
+}
+
+.plan-heading {
+}
+
+.plan-desc {
+    width: 709px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.plan-body {
+    margin: 38px auto 0;
+    width: 994px;
+}
+
+.plan-pricing__select-wrap {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.plan-pricing__select {
+    position: relative;
+}
+
+.plan-pricing__select-input {
+    display: none;
+}
+
+.plan-pricing__select-input:checked ~ .plan-pricing__select-label,
+.plan-pricing__select-input:not(:checked) ~ .plan-pricing__select-label span:nth-child(1) {
+    color: var(--second-color);
+}
+
+.plan-pricing__select-input:checked ~ .plan-pricing__select-label span:nth-child(1),
+.plan-pricing__select-input:checked ~ .plan-pricing__select-label::after {
+    color: #fff;
+    width: 138px;
+}
+
+.plan-pricing__select-input:checked ~ .plan-pricing__select-label::after {
+    right: auto;
+    left: 0;
+}
+
+.plan-pricing__select-label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 276px;
+    height: 56px;
+    padding: 0 40px;
+    border-radius: 31px;
+    border: 1px solid rgba(255, 91, 46, 0.6);
+
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1;
+    cursor: pointer;
+    user-select: none;
+}
+
+.plan-pricing__select-label::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    width: 131px;
+    height: inherit;
+    border-radius: inherit;
+    background-color: var(--second-color);
+}
+
+.plan-pricing__select-label span {
+    position: relative;
+    z-index: 1;
+}
+
+.plan-pricing__off {
+    position: absolute;
+    top: -10px;
+    right: -110px;
+}
+
+/* Plan pricing option */
+.plan-pricing__option-wrap {
+    margin-top: 56px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 44px;
+}
+
+.plan-pricing__option {
+    padding: 30px 28px 43px;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.plan-pricing__option-type {
+    color: var(--second-color);
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.plan-pricing__option-heading {
+    margin-top: 8px;
+    color: #3f4065;
+    font-size: 1.8rem;
+}
+
+.plan-pricing__option-price {
+    margin-top: 24px;
+    color: var(--primary-color);
+    font-family: Sora;
+    font-size: 3.3rem;
+    font-weight: 700;
+    line-height: 1.03;
+}
+
+.plan-pricing__option-btn {
+    --height: 44px;
+
+    margin-top: 22px;
+    width: 100%;
+    background-color: transparent;
+}
+
+.plan-pricing__option-list {
+    margin-top: 24px;
+}
+
+.plan-pricing__option-item {
+    display: flex;
+    align-items: center;
+    margin-top: 18px;
+    color: var(--text-color-02);
+    font-size: 1.4rem;
+    line-height: 1;
+}
+
+.plan-pricing__option-item::before {
+    content: url(../icon/plan-pricing-option-item-icon.svg);
+    display: inline-block;
+    margin-right: 14px;
+}
+
+.plan-pricing__option-item.plan-pricing__option-item--not::before {
+    content: url(../icon/plan-pricing-option-item-icon-not.svg);
 }
