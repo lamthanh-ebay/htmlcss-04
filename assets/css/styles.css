@@ -1358,7 +1358,6 @@ button {
 .footer-wrap {
     display: flex;
     align-items: stretch;
-    width: 100vw;
 }
 
 /* Footer left */
